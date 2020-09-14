@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+}
+
+#grid-container {
+    display: grid;
+    /* make the divs appear as a grid (versus just one on each line) */
+    width: 960px;
+    height: 960px;
+}
+
+/* on-off button: https://www.w3schools.com/howto/howto_css_switch.asp */
+
+#grid-container > div {
+    border: 1px solid black;
+}
+
+.black {
+    background-color: black;
+}
