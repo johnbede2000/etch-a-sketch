@@ -7,7 +7,7 @@ function createDivs() {
         div.classList.add('paintMe');
         document.querySelector('#grid-container').appendChild(div);
     }
-    document.querySelector('#grid-container').style.cssText = `grid-template-columns: repeat(${lineNumber}, calc(960px/${lineNumber}));`;
+    document.querySelector('#grid-container').style.cssText = `grid-template-columns: repeat(${lineNumber}, calc(70vh/${lineNumber})); grid-template-rows: repeat(${lineNumber}, calc(70vh/${lineNumber}));`;
     let allSquares = document.querySelectorAll('.paintMe');
     allSquares.forEach((div) => {
         div.addEventListener('mouseenter', (e) => {
@@ -27,7 +27,7 @@ function reset() {
 document.querySelector('#reset').addEventListener('click', reset)
 
 function newGrid() {
-    lineNumber = prompt("How many squares per side?");
+    lineNumber = prompt("How many squares per side? (Enter 2-64)"); // put some restrictions, a range of numbers 2-64
     squareNumber = lineNumber * lineNumber;
     document.querySelector('#grid-container').innerHTML = "";
     createDivs()
