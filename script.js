@@ -1,5 +1,6 @@
 let lineNumber = 16;
 let squareNumber = lineNumber * lineNumber;
+let color = 'black';
 
 function createDivs() {
     for (i=1; i<=squareNumber; i++) {
@@ -11,7 +12,7 @@ function createDivs() {
     let allSquares = document.querySelectorAll('.paintMe');
     allSquares.forEach((div) => {
         div.addEventListener('mouseenter', (e) => {
-            e.target.classList.add('black');
+            e.target.classList.add(color);
             }
             )
         }
@@ -28,7 +29,7 @@ function reset() {
 document.querySelector('#reset').addEventListener('click', reset)
 
 function newGrid() {
-    lineNumber = prompt("How many squares per side? (Enter a number between 2-64)"); // Change from prompt to an input box
+    lineNumber = prompt("How many squares per side? (Enter a number between 2-64)");
     let testRange = /^[1-9]$|^[1-5][0-9]$|^6[0-4]$/;
     let result = testRange.test(lineNumber);
     if (result) {
