@@ -20,3 +20,11 @@ allSquares.forEach((div) => {
         )
     }
 )
+
+function reset() {
+    allSquares.forEach((div) => {
+        div.className = 'paintMe'
+    });
+}
+
+document.querySelector('#reset').addEventListener('click', reset)
