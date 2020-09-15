@@ -8,23 +8,37 @@ function createDivs() {
         document.querySelector('#grid-container').appendChild(div);
     }
     document.querySelector('#grid-container').style.cssText = `grid-template-columns: repeat(${lineNumber}, calc(960px/${lineNumber}));`;
+    let allSquares = document.querySelectorAll('.paintMe');
+    allSquares.forEach((div) => {
+        div.addEventListener('mouseenter', (e) => {
+            e.target.classList.add('black');
+            }
+            )
+        }
+    )
 }
-
 createDivs();
 
-let allSquares = document.querySelectorAll('.paintMe');
-allSquares.forEach((div) => {
-    div.addEventListener('mouseenter', (e) => {
-        e.target.classList.add('black');
-        }
-        )
-    }
-)
+// let allSquares = document.querySelectorAll('.paintMe');
+// allSquares.forEach((div) => {
+//     div.addEventListener('mouseenter', (e) => {
+//         e.target.classList.add('black');
+//         }
+//         )
+//     }
+// )
 
 function reset() {
-    allSquares.forEach((div) => {
+    document.querySelectorAll('.paintMe').forEach((div) => {
         div.className = 'paintMe'
     });
 }
-
 document.querySelector('#reset').addEventListener('click', reset)
+
+function newGrid() {
+    let newLineNumber = prompt("How many squares per side?");
+    let squareNumber = newLineNumber * newLineNumber;
+    document.querySelector('#grid-container').innerHTML = "";
+    createDivs()
+}
+document.querySelector('#new-grid').addEventListener('click', newGrid);
