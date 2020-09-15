@@ -18,3 +18,7 @@ html {
 .black {
     background-color: black;
 }
+
+.error-msg {
+    color: red;
+}
