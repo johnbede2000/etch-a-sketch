@@ -13,13 +13,10 @@ function createDivs() {
 createDivs();
 
 let allSquares = document.querySelectorAll('.paintMe');
-allSquares.forEach(listenTo(currentValue));
-
-function listenTo(currentValue) {
-    this.addEventListener('mouseenter', colorMe(e));
-    console.log(currentValue);
-}
-
-function colorMe(e) {
-    e.style.classList.add('black');
-}
+allSquares.forEach((div) => {
+    div.addEventListener('mouseenter', (e) => {
+        e.target.classList.add('black');
+        }
+        )
+    }
+)
