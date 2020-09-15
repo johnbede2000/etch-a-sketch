@@ -19,15 +19,6 @@ function createDivs() {
 }
 createDivs();
 
-// let allSquares = document.querySelectorAll('.paintMe');
-// allSquares.forEach((div) => {
-//     div.addEventListener('mouseenter', (e) => {
-//         e.target.classList.add('black');
-//         }
-//         )
-//     }
-// )
-
 function reset() {
     document.querySelectorAll('.paintMe').forEach((div) => {
         div.className = 'paintMe'
@@ -36,8 +27,8 @@ function reset() {
 document.querySelector('#reset').addEventListener('click', reset)
 
 function newGrid() {
-    let newLineNumber = prompt("How many squares per side?");
-    let squareNumber = newLineNumber * newLineNumber;
+    lineNumber = prompt("How many squares per side?");
+    squareNumber = lineNumber * lineNumber;
     document.querySelector('#grid-container').innerHTML = "";
     createDivs()
 }
