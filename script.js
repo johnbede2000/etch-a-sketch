@@ -11,6 +11,9 @@ document.querySelector('#red').addEventListener('click', () => {
 document.querySelector('#blue').addEventListener('click', () => {
     color = 'blue';
 })
+document.querySelector('#erase').addEventListener('click', () => {
+    color = 'white';
+})
 
 
 function createDivs() {
@@ -23,6 +26,7 @@ function createDivs() {
     let allSquares = document.querySelectorAll('.paintMe');
     allSquares.forEach((div) => {
         div.addEventListener('mouseenter', (e) => {
+            e.target.className = 'paintMe';
             e.target.classList.add(color);
             }
             )
