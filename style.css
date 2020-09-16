@@ -5,6 +5,16 @@ html {
     background-color: whitesmoke;
 }
 
+.home-link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: left;  
+    color: black;
+    margin-top: 2rem;
+    margin-left: 7%;
+    display: block;
+}
+
 button {
     background-color: rgb(98,0,238);
     color: white;
