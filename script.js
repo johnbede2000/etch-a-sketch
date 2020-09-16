@@ -13,14 +13,13 @@ document.querySelector('#blue').addEventListener('click', () => {
 })
 
 
-
 function createDivs() {
     for (i=1; i<=squareNumber; i++) {
         let div = document.createElement('div');
         div.classList.add('paintMe');
         document.querySelector('#grid-container').appendChild(div);
     }
-    document.querySelector('#grid-container').style.cssText = `grid-template-columns: repeat(${lineNumber}, calc(70vh/${lineNumber})); grid-template-rows: repeat(${lineNumber}, calc(70vh/${lineNumber}));`;
+    document.querySelector('#grid-container').style.cssText = `grid-template-columns: repeat(${lineNumber}, calc(760px/${lineNumber})); grid-template-rows: repeat(${lineNumber}, calc(760px/${lineNumber}));`;
     let allSquares = document.querySelectorAll('.paintMe');
     allSquares.forEach((div) => {
         div.addEventListener('mouseenter', (e) => {
