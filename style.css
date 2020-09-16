@@ -9,14 +9,20 @@ html {
     margin-top: 1rem;
 }
 
-/* on-off button: https://www.w3schools.com/howto/howto_css_switch.asp */
-
 #grid-container > div {
     border: 1px solid black;
 }
 
 .black {
     background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
 }
 
 .error-msg {

@@ -2,6 +2,18 @@ let lineNumber = 16;
 let squareNumber = lineNumber * lineNumber;
 let color = 'black';
 
+document.querySelector('#black').addEventListener('click', () => {
+    color = 'black';
+})
+document.querySelector('#red').addEventListener('click', () => {
+    color = 'red';
+})
+document.querySelector('#blue').addEventListener('click', () => {
+    color = 'blue';
+})
+
+
+
 function createDivs() {
     for (i=1; i<=squareNumber; i++) {
         let div = document.createElement('div');
@@ -22,7 +34,7 @@ createDivs();
 
 function reset() {
     document.querySelectorAll('.paintMe').forEach((div) => {
-        div.className = 'paintMe'
+        div.className = 'paintMe';
     });
     document.querySelector('.error-msg').textContent = '';
 }
