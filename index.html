@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <link rel="stylesheet" href="style.css" />
     <title>Etch A Sketch</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/10e8632cd5.js" crossorigin="anonymous"></script>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/10e8632cd5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-    <body>
-        <a class="home-link" href="../"><i class="fas fa-arrow-circle-left"></i> Home</a>
-        <div class="page-container">
-            <h1>'Hover Etch A Sketch'</h1>
-            <p>Hover your mouse over the grid to draw!</p>
-            <div class="buttons">
-                <button id="reset">Reset Current Grid</button>
-                <button id="new-grid">Create A New Grid</button>
-            </div>
-            <div class="radios">
-                <label for="black">
-                    <input type="radio" name="color" id="black" value="black" checked>Black
-                </label>
-                <label for="red">
-                    <input type="radio" name="color" id="red" value="red">Red
-                </label>
-                <label for="blue">
-                    <input type="radio" name="color" id="blue" value="blue">Blue
-                </label>
-                <label for="erase">
-                    <input type="radio" name="color" id="erase" value="erase">Eraser 
-                </label>
-            </div>
-            <div class='error-msg'></div>
-            <div id='grid-container'>
-            </div>
-        </div>
-        <script src="script.js"></script>
-    </body>
+  <body>
+    <a class="home-link" href="../index.html#projects"
+      ><i class="fas fa-arrow-circle-left"></i> Home</a
+    >
+    <div class="page-container">
+      <h1>'Hover Etch A Sketch'</h1>
+      <p>Hover your mouse over the grid to draw!</p>
+      <div class="buttons">
+        <button id="reset">Reset Current Grid</button>
+        <button id="new-grid">Create A New Grid</button>
+      </div>
+      <div class="radios">
+        <label for="black">
+          <input
+            type="radio"
+            name="color"
+            id="black"
+            value="black"
+            checked
+          />Black
+        </label>
+        <label for="red">
+          <input type="radio" name="color" id="red" value="red" />Red
+        </label>
+        <label for="blue">
+          <input type="radio" name="color" id="blue" value="blue" />Blue
+        </label>
+        <label for="erase">
+          <input type="radio" name="color" id="erase" value="erase" />Eraser
+        </label>
+      </div>
+      <div class="error-msg"></div>
+      <div id="grid-container"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
